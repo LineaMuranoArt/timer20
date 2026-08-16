@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Linea Murano Art - Timer 15</title>
+<title>Linea Murano Art - Timer 20</title>
 
 <style>
 
@@ -640,7 +640,7 @@ body{
         <div class="timer-panel">
 
             <div id="countdown">
-                15<span class="colon-red">:</span>00
+                20<span class="colon-red">:</span>00
             </div>
 
         </div>
@@ -742,7 +742,7 @@ body{
 <script>
 
 /* ===============================
-   TIMER 15 MINUTES + AUDIO
+   TIMER 20 MINUTES + AUDIO
 ================================ */
 
 const page =
@@ -895,14 +895,14 @@ function updateTimer(){
     /*
        SHOW ACCESS SCREEN
        for the first 60 seconds after
-       :00 / :15 / :30 / :45
+       :00 / :20 / :40
     */
 
     const isDemoMinute =
         (
             minute === 0 ||
             minute === 20 ||
-            minute === 40 
+            minute === 40
         );
 
 
@@ -920,7 +920,7 @@ function updateTimer(){
 
     /*
        AUDIO AT START
-       :00 / :15 / :30 / :45 exactly
+       :00 / :20 / :40 exactly
     */
 
     if(isDemoMinute && second === 0){
@@ -948,7 +948,6 @@ function updateTimer(){
         nextMinute = 40;
 
     }
-   
     else{
 
         nextMinute = 60;
