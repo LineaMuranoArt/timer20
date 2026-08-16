@@ -633,7 +633,7 @@ body{
 
 
         <div class="every">
-            EVERY 15 MINUTES
+            EVERY 20 MINUTES
         </div>
 
 
@@ -901,9 +901,8 @@ function updateTimer(){
     const isDemoMinute =
         (
             minute === 0 ||
-            minute === 15 ||
-            minute === 30 ||
-            minute === 45
+            minute === 20 ||
+            minute === 40 
         );
 
 
@@ -939,21 +938,17 @@ function updateTimer(){
     let nextMinute;
 
 
-    if(minute < 15){
+    if(minute < 20){
 
-        nextMinute = 15;
-
-    }
-    else if(minute < 30){
-
-        nextMinute = 30;
+        nextMinute = 20;
 
     }
-    else if(minute < 45){
+    else if(minute < 40){
 
-        nextMinute = 45;
+        nextMinute = 40;
 
     }
+   
     else{
 
         nextMinute = 60;
@@ -973,7 +968,7 @@ function updateTimer(){
 
     if(remaining <= 0){
 
-        remaining = 900;
+        remaining = 1200;
 
     }
 
@@ -994,21 +989,18 @@ function updateTimer(){
 */
 
 const isTenMinutesBefore =
-    minute === 5 ||
-    minute === 20 ||
-    minute === 35 ||
+    minute === 10 ||
+    minute === 30 ||
     minute === 50;
 
 const isFiveMinutesBefore =
-    minute === 10 ||
-    minute === 25 ||
-    minute === 40 ||
+    minute === 15 ||
+    minute === 35 ||
     minute === 55;
 
 const isOneMinuteBefore =
-    minute === 14 ||
-    minute === 29 ||
-    minute === 44 ||
+    minute === 19 ||
+    minute === 39 ||
     minute === 59;
 
 
